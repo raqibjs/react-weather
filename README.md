@@ -1,6 +1,6 @@
 # [React-Weather](http://arraqib.github.io/) - Simple weather app
 
-This is a simple project that uses React and [Material-UI](http://callemall.github.io/material-ui/).
+This is a simple project that uses [React](https://github.com/facebook/react) and [Material-UI](http://callemall.github.io/material-ui/).
 
 ## Installation
 
