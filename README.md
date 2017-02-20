@@ -1,4 +1,4 @@
-# [React-Weather](http://arraqib.github.io/) - Simple weather app
+# [React-Weather](http://arraqib.github.io/) - Get weather information
 
 This is a simple project that uses [React](https://github.com/facebook/react) and [Material-UI](http://callemall.github.io/material-ui/).
 
