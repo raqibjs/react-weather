@@ -21,7 +21,7 @@ const config = {
     port: 3000, // Port Number
     host: 'localhost', // Change to '0.0.0.0' for external facing server
   },
-  devtool: 'eval',
+  devtool: 'source-map',
   output: {
     path: buildPath, // Path of output file
     filename: 'app.js',
@@ -33,7 +33,7 @@ const config = {
     new webpack.NoErrorsPlugin(),
     // Moves files
     new TransferWebpackPlugin([
-      {from: 'www'},
+      { from: 'www' },
     ], path.resolve(__dirname, 'src')),
   ],
 

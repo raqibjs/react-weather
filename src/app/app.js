@@ -7,19 +7,17 @@ import Weather from './components/Weather'; // Our custom react component
 import About from './components/About'; // Our custom react component
 import Examples from './components/Examples'; // Our custom react component
 
-class App extends React.Component {
+const App = () => {
+    return (
+        <Router history={hashHistory}>
+            <Route path="/" component={Main}>
+                <IndexRoute component={Weather} />
+                <Route path="/about" component={About} />
+                <Route path="/examples" component={Examples} />
+            </Route>
+        </Router>
+    )
 
-    render() {
-        return (
-            <Router history={hashHistory}>
-                <Route path="/" component={Main}>
-                    <IndexRoute component={Weather} />
-                    <Route path="/about" component={About} />
-                    <Route path="/examples" component={Examples} />
-                </Route>
-            </Router>
-        )
-    }
 }
 
-render(<App />, document.getElementById('app'));
+render(<App/>, document.getElementById('app'));

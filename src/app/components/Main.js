@@ -7,8 +7,7 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
-import ActionViewList from 'material-ui/svg-icons/action/view-list';
-import FileCloudCircle from 'material-ui/svg-icons/file/cloud-circle';
+import NavigationMenus from 'material-ui/svg-icons/navigation/menu';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import Nav from './Nav';
@@ -19,47 +18,30 @@ import Nav from './Nav';
 injectTapEventPlugin();
 
 
-export default class Main extends React.Component {
-    constructor(props) {
-        super(props);
+const Main = (props) => {
+
+    let paperStyle = {
+        width: "90%",
+        minHeight: 600,
+        margin: '0 auto',
+        textAlign: 'center'
     }
 
-    render() {
+    let navLink = (
+        <IconMenu iconButtonElement={<IconButton iconStyle={{color: '#ffffff'}}><NavigationMenus /></IconButton>}>
+            <Nav />
+        </IconMenu>)
 
-        let paperStyle = {
-            width: "90%",
-            minHeight: 600,
-            margin: '0 auto',
-            padding: "0 10",
-            textAlign: 'center'
-        }
-
-        let iconStyle = {
-            width: 30,
-            height:30
-        }
-
-        let navLink = (
-            <IconMenu
-                iconButtonElement={
-                    <IconButton iconStyle={iconStyle}><ActionViewList/></IconButton>
-                }
-            >
-                <Nav/>
-            </IconMenu>)
-
-        return (
-            <MuiThemeProvider>
-                <div>
-                    <Paper style={paperStyle}>
-                        <br />
-                        <AppBar title="Weather App"
-                            iconElementLeft={<IconButton iconStyle={iconStyle}><FileCloudCircle/></IconButton>} iconElementRight={navLink}
-                        />
-                        {this.props.children}
-                    </Paper>
-                </div>
-            </MuiThemeProvider>
-        )
-    }
+    return (
+        <MuiThemeProvider style={{paddingTop: 0}}>
+            <div>
+                <Paper style={paperStyle}>
+                    <AppBar style={{textAlign: 'left'}} title="Weather App" iconElementLeft={navLink}/>
+                    {props.children}
+                </Paper>
+            </div>
+        </MuiThemeProvider>
+    )
 }
+
+export default Main;

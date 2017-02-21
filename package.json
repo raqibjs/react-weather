@@ -4,13 +4,13 @@
   "description": "Sample React project that uses Material-UI to fet weather information",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/arraqib/react-weather.git"
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors"
   },
-  "private": true,
+  "private": false,
   "devDependencies": {
     "babel-core": "^6.3.26",
     "babel-loader": "^6.2.4",

@@ -1,15 +1,12 @@
 import React from 'react';
 
-export default class About extends React.Component {
-    constructor() {
-        super();
-    }
-
-    render() {
-        return (
-            <div>
-                <h4>About Component</h4>
-            </div>
-        );
-    }
+const About = (props) => {
+    return (
+        <div>
+            <h4>Little About Us</h4>
+            <p>Our mission is to make geo data open and available through easy to use cloud products and APIs to inspire new innovative applications with imagery, weather data, and other data feeds that are instantly available for you. A lot of new features are coming soon.</p>
+        </div>
+    );
 }
+
+export default About;
