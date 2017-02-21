@@ -7,7 +7,8 @@
     "url": "https://github.com/arraqib/react-weather.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
+    "start": "node server.js",
+    "server": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors"
   },
   "private": false,
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "express": "^4.14.1",
     "formsy-material-ui": "^0.5.5",
     "formsy-react": "^0.18.0",
     "material-ui": "^0.15.0",

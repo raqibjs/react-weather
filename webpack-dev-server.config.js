@@ -4,7 +4,7 @@ const buildPath = path.resolve(__dirname, 'build');
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 const bowerComponentsPath = path.resolve(__dirname, 'bower_components');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
-
+const PORT = process.env.PORT || 3000; 
 const config = {
   // Entry points to the project
   entry: [
@@ -18,7 +18,7 @@ const config = {
     devtool: 'eval',
     hot: true, // Live-reload
     inline: true,
-    port: 3000, // Port Number
+    port: PORT, // Port Number
     host: 'localhost', // Change to '0.0.0.0' for external facing server
   },
   devtool: 'source-map',
